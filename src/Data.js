@@ -3,28 +3,37 @@ import styled from 'styled-components'
 
 export const Data = () => {
    
-    const [info, setInfo] = useState();
+    const [name, setName] = useState();
     const [age, setAge] = useState();
-   
 
     //   1 - useEffect as componentDidUpdate without a condition
     // useEffect(() => {
     //     console.log('useEffect...');
-    //     setAge(25)
-    //     setInfo("Zainab")
     // })
 
 
     //   2 -  useEffect as componentDidMount with a condition 
     // useEffect(() => {
     //     console.log('useEffect...');
-    // },[info])
+    // },[name])
 
 
     //  3 -  useEffect as componentDidMount
     // useEffect(() => {
     //         console.log('useEffect...');
     //     },[]);
+
+   
+    // clean up with useEffect
+    // useEffect(() => {
+    //    const timer = setTimeout(() => {
+    //        alert("times up!!")
+    //    }, 5000);
+    //     return () => {
+    //         clearTimeout(timer)
+    //     }
+    // }, [name])
+
     
 
     return(
@@ -34,7 +43,7 @@ export const Data = () => {
             <hr/>
             <div className="container">
           
-            <input  placeholder= "Your Name" onChange ={(e)=>setInfo(e.target.value)} value={info || ''}/><br/><br/>
+            <input  placeholder= "Your Name" onChange ={(e)=>setName(e.target.value)} value={name || ''}/><br/><br/>
            
             <input placeholder= "Your Age" onChange ={(e)=>setAge(e.target.value)} value={age || ''}/><br/><br/>
           
