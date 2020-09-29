@@ -14,6 +14,7 @@ we can also clean up our component when we need to prevent memory leaks or reset
 
 #### To run this project:
 1. open project in VScode
-2. run command : npm start 
+2. run command : npm i styled-components
+3. run command : npm start 
 
 Happy experminting !
